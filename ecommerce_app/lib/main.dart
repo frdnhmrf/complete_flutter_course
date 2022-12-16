@@ -3,12 +3,16 @@ import 'dart:async';
 import 'package:ecommerce_app/src/app.dart';
 import 'package:ecommerce_app/src/localization/string_hardcoded.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 void main() async {
   // * For more info on error handling, see:
   // * https://docs.flutter.dev/testing/errors
+
   await runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
+    setUrlStrategy(PathUrlStrategy());
     // * Entry point of the app
     runApp(const MyApp());
 
