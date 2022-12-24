@@ -36,10 +36,13 @@ void main() {
           when(authRepository.signOut).thenAnswer(
             (_) => Future.value(),
           );
-          // // Expect Later
+          // Expect Later
           // expectLater(
           //   controller.stream,
-          //   emitsInOrder(const [AsyncLoading<void>(), AsyncData<void>(null)]),
+          //   emitsInOrder(const [
+          //     AsyncLoading<void>(),
+          //     AsyncData<void>(null),
+          //   ]),
           // );
 
           // run
